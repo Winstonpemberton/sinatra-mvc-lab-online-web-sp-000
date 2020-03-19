@@ -5,7 +5,7 @@ class PigLatinizer
     vowels.include?(word[0])
   end
 
-   def piglatinizer(word)
+   def piglatinize(word)
      if self.is_vowel?(word)
        word.concat('way')
      else
@@ -14,7 +14,7 @@ class PigLatinizer
    end
 
 
-   def sentence_to_pig_latin(sentence)
-     sentence.split.collect {|word| piglatinizer(word)}.join(' ')
+   def to_pig_latin(phrase)
+     phrase.split.collect {|word| piglatinize(word)}.join(' ')
    end
-end
+end 
