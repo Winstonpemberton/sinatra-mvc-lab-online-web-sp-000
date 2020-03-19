@@ -2,7 +2,7 @@ class PigLatinizer
 
   def is_vowel?(word)
     vowels = 'aeiouAEIOU'
-    vowels.include?(word)
+    vowels.include?(word[0])
   end
 
    def piglatinize(word)
@@ -17,4 +17,4 @@ class PigLatinizer
    def to_pig_latin(phrase)
      phrase.split.collect {|word| piglatinize(word)}.join(' ')
    end
-end
+end 
