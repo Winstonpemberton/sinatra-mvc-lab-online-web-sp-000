@@ -18,8 +18,8 @@ class PigLatinizer
   #    phrase.split.collect {|word| piglatinize(word)}.join(' ')
   #  end
 
-  def piglatinize(ay)
-    ay[0] =~ /[aeiou]/ ? ay.gsub(/([aeiou])(\w+)*/, '\1\2way') : ay.gsub(/([^aeiou])(\w+)*/, '\2\1ay')
+  def piglatinize(word)
+    word[0] =~ /[aeiou]/ ? word.gsub(/([aeiou])(\w+)*/, '\1\2way') : word.gsub(/([^aeiou])(\w+)*/, '\2\1ay')
   end
 
 end
