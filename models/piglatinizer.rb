@@ -10,10 +10,10 @@ class PigLatinizer
        word.concat('way')
      else
        word.concat(word.slice!(/^[^aeiouAEIOU]*/i || "")) + 'ay'
-     end	 
+     end
    end
- 
- 
+
+
    def to_pig_latin(phrase)
      phrase.split.collect {|word| piglatinize(word)}.join(' ')
    end
