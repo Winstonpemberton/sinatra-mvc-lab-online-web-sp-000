@@ -6,7 +6,7 @@ class PigLatinizer
   end
 
    def piglatinize(word)
-     if self.is_vowel?(word)
+     if self.is_vowel?(word) == true
        word.concat('way')
      else
        word.concat(word.slice!(/^[^aeiouAEIOU]*/i || "")) + 'ay'
